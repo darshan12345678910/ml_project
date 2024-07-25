@@ -1,4 +1,7 @@
 pandas
 numpy
 seaborn
+numpy
+sklearn
+warnings
 #-e .
