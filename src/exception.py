@@ -1,7 +1,6 @@
 # exception.py
 import sys
-from logger import logging  # Correct import for a module in the same directory
-
+from src.logger import logging  
 def error_message_detail(error, error_detail):
     _, _, exc_tb = error_detail.exc_info()
     file_name = exc_tb.tb_frame.f_code.co_filename
@@ -17,8 +16,4 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
 
-try:
-    a = 10 / 0
-except Exception as e:
-    logging.info("devide zero")
-    raise CustomException(str(e), sys)
+
